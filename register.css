@@ -15,8 +15,8 @@
 }
 
 .form-box{
-    width: 90%;
-    max-width: 450px;
+    width: 500px;
+    height: 700px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -52,6 +52,15 @@
     transition:  max-height 0.5s;
     overflow: hidden;
 }
+.input-field.hideable {
+    max-height: 60px; /* Adjust as needed */
+}
+
+.input-field.hideable.hidden {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
 input{
     width: 100%;
     background: transparent;
@@ -74,6 +83,7 @@ form p a{
 .btn-field{
     width: 100%;
     display: flex;
+    margin-top: 150px;
     justify-content: space-between;
 }
 .btn-field button{

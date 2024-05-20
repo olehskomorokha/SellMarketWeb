@@ -40,3 +40,7 @@ fetchProductsButton.addEventListener('click', () => {
     }
 });
 });
+
+document.getElementById('login-button').addEventListener('click', () => {
+    window.location.href = 'index.html';
+});

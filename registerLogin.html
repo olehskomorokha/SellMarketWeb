@@ -17,14 +17,28 @@
                     <i class="fa-solid fa-user"></i>
                     <input type="text" placeholder="Name">
                 </div>
-                <div class="input-field">
+                <div class="input-field" id="LastnameField">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Last Name">
+                </div>
+                <div class="input-field" id="PnodeField">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Phone number">
+                </div>
+                <div class="input-field" id="NicknameField">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="text" placeholder="Nick Name">
+                </div>
+                <div class="input-field" id="EmailFirld">
                     <i class="fa-solid fa-envelope"></i>
                     <input type="email" placeholder="Email">
                 </div>
-                <div class="input-field">
+                <div class="input-field" id="passwordFirld">
                     <i class="fa-solid fa-lock"></i>
                     <input type="password" placeholder="Password">
                 </div>
+              
+            
                 <p>Lost password <a href="#">Click Here!</a></p>
             </div>
             <div class="btn-field">
@@ -34,25 +48,7 @@
         </form>
     </div>
 </div>
-<script>
-    let signupBtn = document.getElementById("signupBtn");
-    let signinBtn = document.getElementById("signinBtn");
-    let nameField = document.getElementById("nameField");
-    let title = document.getElementById("title");
-
-    signinBtn.onclick = function(){
-        nameField.style.maxHeight = "0";
-        title.innerHTML = "Sign In";
-        signupBtn.classList.add("disable");
-        signinBtn.classList.remove("disable");
-    }
-    
-    signupBtn.onclick = function(){
-        nameField.style.maxHeight = "60px";
-        title.innerHTML = "Sign Up";
-        signupBtn.classList.remove("disable");
-        signinBtn.classList.add("disable");
-    }
+<script src="Js/registerLogin.js">
 </script>
 </body>
 </html>
