@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const fetchProductsButton = document.getElementById("fetch-products");
     const categoryIdInput = document.getElementById("category-id");
     // Function to load products based on category id
-    function loadProducts(categoryId, keyword = '') {
-        fetch(`https://localhost:7118/api/Product/GetAll?Id=${categoryId}&keyword=${keyword}`)
+    function loadProducts(categoryId) {
+        fetch(`https://localhost:7118/api/Product/GetAll?Id=${categoryId}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
