@@ -96,10 +96,26 @@ form p a{
     outline: 0;
     cursor: pointer;
 }
+.btn-field2{
+    flex-basis: 48%;
+    background: #3c00a0;
+    color: #fff;
+    height: 20px;
+    border-radius: 0px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
 .input-group{
     height: 280px;
 }
 .btn-field button.disable{
     background: #eaeaea;
     color: #555;
+}
+.btn-field-submit{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }

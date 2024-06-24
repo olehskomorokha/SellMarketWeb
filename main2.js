@@ -39,3 +39,4 @@ async function fetchProductCategories() {
 
 // Call the function when the DOM content is loaded
 document.addEventListener('DOMContentLoaded', fetchProductCategories);
+

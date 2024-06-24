@@ -1,6 +1,6 @@
 async function fetchProductCategoryDetails() {
     try {
-        const response = await fetch(`https://localhost:7118/api/Product/GetProductSubcategory?Id=${2}`);
+        const response = await fetch(`https://localhost:7118/api/Product/GetProductSubcategory?Id=${1}`);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }

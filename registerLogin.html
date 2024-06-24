@@ -29,14 +29,16 @@
                     <i class="fa-solid fa-lock"></i>
                     <input type="text" id="nicknameInput" placeholder="Nick Name">
                 </div>
-                <div class="input-field" id="EmailField">
-                    <i class="fa-solid fa-envelope"></i>
-                    <input type="email" id="emailInput" placeholder="Email">
-                </div>
-                <div class="input-field" id="passwordField">
-                    <i class="fa-solid fa-lock"></i>
-                    <input type="password" id="passwordInput" placeholder="Password">
-                </div>
+                <form id="login-form">
+                    <div class="input-field" id="EmailField">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="emailInput" placeholder="Email">
+                    </div>
+                    <div class="input-field" id="passwordField">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="passwordInput" placeholder="Password" autocomplete="off">
+                    </div>
+                </form>
               
                 <p>Lost password <a href="#">Click Here!</a></p>
             </div>
@@ -47,8 +49,8 @@
         </form>
     </div>
 </div>
-<script src="registerLogin.js">
-</script>
 <script src="registerLogiс.js"></script>
+<script src="Login.js"></script>
+<script src="RegisterLogin.js"></script>
 </body>
 </html>

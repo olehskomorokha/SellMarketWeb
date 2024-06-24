@@ -9,6 +9,7 @@
 <body>
     <header class="header">
         <button id="login-button">Login/Register</button>
+        <button id="Home-button">HomePage</button>
     </header>
     <div class="container">
         <aside class="sidebar">
@@ -30,5 +31,11 @@
             window.location.href = 'registerLogin.html';
         });
     </script>
+    <script>
+        document.getElementById('Home-button').addEventListener('click', () => {
+            window.location.href = 'Home.html';
+        });
+    </script>
+    <script src="checkLogin.js"></script>
 </body>
 </html>

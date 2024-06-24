@@ -70,6 +70,14 @@ body {
     cursor: pointer;
     border-radius: 4px;
 }
+#Home-button{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
 
 #login-button:hover {
     background-color: #0056b3;
@@ -99,4 +107,17 @@ body {
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 4px;
+}
+.category-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+.category-text {
+    font-size: 16px;
+    margin-top: 10px;
+}
+#Home-button {
+    display: none; /* Initially hide the Home button */
 }

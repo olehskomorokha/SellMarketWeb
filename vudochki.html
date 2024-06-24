@@ -9,16 +9,20 @@
 <body>
     <header class="header">
         <button id="login-button">Login/Register</button>
+        <button id="Home-button">HomePage</button>
     </header>
     <div class="container">
         <aside class="sidebar">
             <div>
-                
+                <script src="vudochki.js"></script>
             </div>
         </aside>
         <main class="content">
             <div id="product-list">
-                <!-- Products will be dynamically loaded here -->
+                <!-- Categories will be dynamically loaded here -->
+            </div>
+            <div id="detail-list">
+                <!-- Category details will be dynamically loaded here -->
             </div>
         </main>
     </div>
@@ -27,5 +31,6 @@
             window.location.href = 'registerLogin.html';
         });
     </script>
+    <script src="checkLogin.js"></script>
 </body>
 </html>

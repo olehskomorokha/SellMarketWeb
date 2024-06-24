@@ -1,10 +1,10 @@
-let signupBtn = document.getElementById("signupBtn");
-let signinBtn = document.getElementById("signinBtn");
-let nameField = document.getElementById("nameField");
-let LastnameField = document.getElementById("LastnameField");
-let PnodeField = document.getElementById("PnodeField");
-let NicknameField = document.getElementById("NicknameField");
-let title = document.getElementById("title");
+// let signupBtn = document.getElementById("signupBtn");
+// let signinBtn = document.getElementById("signinBtn");
+// let nameField = document.getElementById("nameField");
+// let LastnameField = document.getElementById("LastnameField");
+// let PnodeField = document.getElementById("PnodeField");
+// let NicknameField = document.getElementById("NicknameField");
+// let title = document.getElementById("title");
 
 // Error message creation function
 function createErrorMessage(element, message) {
@@ -34,4 +34,16 @@ signupBtn.onclick = function() {
     signupBtn.classList.remove("disable");
     signinBtn.classList.add("disable");
 }
+// document.getElementById('signinBtn').addEventListener('click', function() {
+//     let script = document.createElement('script');
+//     script.src = 'jwtToken.js';
+//     document.head.appendChild(script);
 
+//     script.onload = function() {
+//         // Assuming the form has id 'login-form'
+//         document.getElementById('signinBtn').addEventListener('submit', loginUser);
+//         // Manually trigger the form submission if needed
+//     };
+
+//     console.log('Sign in button pressed, jwtToken.js script loaded.');
+// });
