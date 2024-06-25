@@ -1,26 +1,43 @@
-async function fetchProductCategoryDetails() {
+async function fetchProductCategories() {
     try {
-        const response = await fetch(`https://localhost:7118/api/Product/GetProductSubcategory?Id=${2}`);
+        const response = await fetch('https://localhost:7118/api/Product/GetSubcategoriesByCategoryId?Id=2');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
-        const categoryDetails = await response.json();
-        console.log(categoryDetails); // Log the fetched data
+        const categories = await response.json();
+        console.log(categories); // Log the fetched data
 
-        const detailList = document.getElementById('detail-list');
-        detailList.innerHTML = '';
+        const productList = document.getElementById('product-list');
+        productList.innerHTML = '';
 
-        categoryDetails.forEach(detail => {
-            const detailBox = document.createElement('div');
-            detailBox.classList.add('detail-box');
-            detailBox.innerText = detail.category; // Assuming `detail` is the correct property name
+        const pageMap = {
+            1: 'carpСoils.html',
+            2: 'spinningСoils.html',
+            3: 'feederCoils.html'
+        };
 
-            detailList.appendChild(detailBox);
+        categories.forEach(category => {
+            const categoryBox = document.createElement('div');
+            categoryBox.classList.add('category-box');
+            categoryBox.innerText = category.category; // Assuming `category` is the correct property name
+
+            // Add click event listener to each category box
+            categoryBox.addEventListener('click', () => {
+                const targetPage = pageMap[category.id]; // Navigate based on category ID
+                if (targetPage) {
+                    window.location.href = targetPage;
+                } else {
+                    alert('Page not found for this category');
+                }
+            });
+
+            productList.appendChild(categoryBox);
         });
     } catch (error) {
-        console.error('Error fetching category details:', error);
+        console.error('Error fetching categories:', error);
     }
 }
 
 // Call the function when the DOM content is loaded
-document.addEventListener('DOMContentLoaded', fetchProductCategoryDetails(1));
+document.addEventListener('DOMContentLoaded', fetchProductCategories);
+

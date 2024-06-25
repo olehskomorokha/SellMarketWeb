@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <button id="login-button">Login/Register</button>
+        <button id="Home-button">HomePage</button>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Add Product</h2>
+            <form id="product-form">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <label for="sellerName">Seller Name:</label>
+                <input type="text" id="sellerName" name="sellerName" required>
+
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" required>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" step="0.01" required>
+
+                <button type="submit">Add Product</button>
+            </form>
+        </aside>
+        <main class="content">
+            <div id="product-list">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </main>
+    </div>
+    <script>
+        document.getElementById('login-button').addEventListener('click', () => {
+            window.location.href = 'registerLogin.html';
+        });
+    </script>
+    <script>
+        document.getElementById('Home-button').addEventListener('click', () => {
+            window.location.href = 'Home.html';
+        });
+    </script>
+    <script src="checkLogin.js"></script>
+</body>
+</html>
