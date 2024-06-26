@@ -34,32 +34,6 @@
                 <button type="submit">Add Product</button>
             </form>
         </aside>
-        <!-- <script>
-            document.addEventListener('DOMContentLoaded', fetchProductCategories);
-        
-            async function fetchProductCategories() {
-                try {
-                    const response = await fetch('https://localhost:7118/api/Product/GetSubcategoriesByCategoryId?Id=1');
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    const categories = await response.json();
-                    console.log(categories); // Log the fetched data
-        
-                    const categorySelect = document.getElementById('category');
-                    categorySelect.innerHTML = '';
-        
-                    categories.forEach(category => {
-                        const option = document.createElement('option');
-                        option.value = category.id; // Assuming `id` is the correct property name for the category ID
-                        option.textContent = category.category; // Assuming `category` is the correct property name for the category name
-                        categorySelect.appendChild(option);
-                    });
-                } catch (error) {
-                    console.error('Error fetching categories:', error);
-                }
-            }
-        </script> -->
         <main class="content">
             <div id="product-list">
                 <!-- Products will be dynamically loaded here -->
@@ -68,7 +42,7 @@
     </div>
     <script>
         document.getElementById('login-button').addEventListener('click', () => {
-            window.location.href = 'registerLogin.html';
+             window.location.href = 'registerLogin.html';
         });
     </script>
     <script>

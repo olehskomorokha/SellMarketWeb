@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an ad</title>
+</head>
+<body>
+    <header>
+        <h1>Створити оголошення</h1>
+    </header>
+    <form id="product-form">
+        <div>
+            <label for="title">Вкажіть назву:</label>
+            <br>
+            <input type="text" id="title" name="title" required>
+            <br>
+            
+        </div>
+        <div>
+            <label for="title">Виберіть категорію товару:</label>
+            <br>
+            <label for="category">Category:</label>
+            <br>
+                <select id="category" name="category" required>
+                    <!-- Options will be dynamically populated -->
+                </select>   
+        </div>
+        <div>
+            <h2>Фото</h2>
+            <p>Перше фото буде на обкладинці оголошення. Перетягніть, щоб змінити порядок фото.</p>
+            <input type="file" id="photoUploader" accept="image/*" multiple>
+            <div id="photoPreview" class="photo-preview"></div>
+        </div>
+        <div>
+            <label for="price">Ціна:</label>
+            <br>
+            <input type="number" id="price" name="price" step="0.01" required>
+        </div>
+        <div>
+            <label for="description">Опис:</label>  
+            <br>
+            <textarea id="description" name="description" required></textarea>
+        </div>
+        <button type="submit">Створити оголошення</button>
+        
+    </form>
+    
+    <script src="addProduct.js"></script>
+    <script src="photoReader.js"></script>
+</body>
+</html>

@@ -1,3 +1,57 @@
+let resizedImageURL = ''; // Variable to store the resized image URL
+
+document.getElementById('photoUploader').addEventListener('change', function(event) {
+    const photoPreview = document.getElementById('photoPreview');
+    photoPreview.innerHTML = ''; // Clear previous previews
+
+    const files = event.target.files;
+    for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            const img = new Image();
+            img.src = e.target.result;
+
+            img.onload = function() {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+
+                // Resize the image to 300x300 pixels while maintaining aspect ratio
+                const maxSize = 300;
+                let width = img.width;
+                let height = img.height;
+
+                if (width > height) {
+                    if (width > maxSize) {
+                        height *= maxSize / width;
+                        width = maxSize;
+                    }
+                } else {
+                    if (height > maxSize) {
+                        width *= maxSize / height;
+                        height = maxSize;
+                    }
+                }
+
+                canvas.width = width;
+                canvas.height = height;
+                ctx.drawImage(img, 0, 0, width, height);
+
+                // Convert canvas to data URL and store it in the variable
+                resizedImageURL = canvas.toDataURL('image/jpeg');
+
+                // Display the resized image preview on the page
+                const previewImg = document.createElement('img');
+                previewImg.src = resizedImageURL;
+                photoPreview.appendChild(previewImg);
+            };
+        };
+
+        reader.readAsDataURL(file);
+    }
+});
+//--------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
     fetchProductCategories();
 
@@ -11,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Description: formData.get('description'),
             Price: parseFloat(formData.get('price')),
             Category: parseInt(formData.get('category')),
-            ImgURL: formData.get('imageUrl')
+            ImgURL: resizedImageURL // Use the resized image URL here
         };
 
         try {
@@ -37,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
 async function fetchProductCategories() {
     try {
         const response = await fetch('https://localhost:7118/api/Product/GetSubcategoriesByCategoryId?Id=1');

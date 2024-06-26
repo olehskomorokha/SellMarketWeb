@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     const productList = document.getElementById("product-list");
-    const fetchProductsButton = document.getElementById("fetch-products");
-    const categoryIdInput = document.getElementById("category-id");
+
     // Function to load products based on category id
     function loadProducts(categoryId) {
-        fetch(`https://localhost:7118/api/Product/GetAllProductById?Id=${categoryId}`)
+        fetch(`https://localhost:7118/api/Product/GetAllProduct`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -28,16 +27,9 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => {
             console.error('Error fetching products:', error);
         });
-}
-
-// Add event listener to the button to fetch products based on input category ID
-fetchProductsButton.addEventListener('click', () => {
-    const categoryId = categoryIdInput.value;
-    if (categoryId) {
-        loadProducts(categoryId);
-    } else {
-        alert('Please enter a valid category ID.');
     }
-});
-});
 
+    // Call loadProducts automatically with a specific categoryId
+    const categoryId = 'your-default-category-id'; // Replace with your desired category ID
+    loadProducts(categoryId);
+});
