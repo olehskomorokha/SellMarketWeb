@@ -130,7 +130,7 @@ document.getElementById('signupBtn').addEventListener('click', async () => {
     };
 
     try {
-        let response = await fetch('https://localhost:7118/api/User/Register', {
+        let response = await fetch('https://localhost:44383/api/User/Register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

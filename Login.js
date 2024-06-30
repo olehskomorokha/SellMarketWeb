@@ -11,7 +11,7 @@ async function loginUser(event) {
     };
 
     try {
-        const response = await fetch('https://localhost:7118/api/User/login', {
+        const response = await fetch('https://localhost:44383/api/User/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

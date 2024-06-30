@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function to load products based on category id
     function loadProducts(categoryId) {
-        fetch(`https://localhost:7118/api/Product/GetAllProduct`)
+        fetch(`https://localhost:44383/api/Product/GetAllProduct`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
