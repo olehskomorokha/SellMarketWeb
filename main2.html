@@ -9,17 +9,22 @@
 </head>
 <body>
     <header class="header">
-        <button id="login-button">Login/Register</button>
-        <button id="Home-button">HomePage</button>
+        <button id="addProduct-button">Додати оголошення</button>
+        <button id="login-button">Логін/Регестрація</button>
+        <button id="Home-button">Мій профіль</button>
     </header>
+    
     <div class="container">
-        <aside class="sidebar">
+        <!-- <aside class="sidebar">
             <div>
-                <script src="main2.js"></script>
+                
             </div>
-        </aside>
+        </aside> -->
         <main class="content">
+            
+            <h1 style="text-align: center;">Розділи товарів</h1>
             <div id="product-list">
+                
                 <!-- Products will be dynamically loaded here -->
             </div>
         </main>
@@ -28,8 +33,10 @@
         document.getElementById('login-button').addEventListener('click', () => {
             window.location.href = 'registerLogin.html';
         });
+        
     </script>
     <script src="checkLogin.js"></script>
+    <script src="main2.js"></script>
     <script></script>
 </body>
 </html>

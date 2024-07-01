@@ -9,8 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         loginButton.style.display = 'inline-block';
         homeButton.style.display = 'none';
-    }
-});
+        document.getElementById('addProduct-button').addEventListener('click', () => {
+            window.location.href = 'registerLogin.html';
+    });
+}});
 document.getElementById('Home-button').addEventListener('click', () => {
     window.location.href = 'Home.html';
+});
+document.getElementById('addProduct-button').addEventListener('click', () => {
+    window.location.href = 'createAnAd.html';
 });

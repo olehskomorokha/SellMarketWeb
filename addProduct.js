@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault(); // Prevent default form submission
         
         const formData = new FormData(form);
-
+xxxx
         const fileInput = document.getElementById('photoUploader');
         for (const file of fileInput.files) {
             formData.append('files', file);
