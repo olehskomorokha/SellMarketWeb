@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/4879c593b5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header">
-        <button id="login-button">Login/Register</button>
-        <button id="Home-button">HomePage</button>
+        <button id="addProduct-button">Додати оголошення</button>
+        <button id="login-button">Логін/Регестрація</button>
+        <button id="Home-button">Мій профіль</button>
     </header>
+    <header class="header2">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text">
+        <button id="findBtn">Пошук</button>
+    </header>
+
     <div class="container">
-        <aside class="sidebar">
-            <div>
-                <script src="vudochki.js"></script>
-            </div>
-        </aside>
         <main class="content">
+            <h1 style="text-align: center;">Вудилища</h1>
             <div id="product-list">
                 <!-- Categories will be dynamically loaded here -->
             </div>
@@ -26,6 +30,7 @@
             </div>
         </main>
     </div>
+    <script src="vudochki.js"></script>
     <script>
         document.getElementById('login-button').addEventListener('click', () => {
             window.location.href = 'registerLogin.html';

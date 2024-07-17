@@ -5,21 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/4879c593b5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header">
-        <button id="login-button">Login/Register</button>
-        <button id="Home-button">HomePage</button>
+        <button id="addProduct-button">Додати оголошення</button>
+        <button id="login-button">Логін/Регестрація</button>
+        <button id="Home-button">Мій профіль</button>
+    </header>
+    <header class="header2">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text">
+        <button id="findBtn">Пошук</button>
     </header>
     <div class="container">
         <aside class="sidebar">
-           
-        </aside>
-        <main class="content">
-            <div id="product-list">
-                <!-- Products will be dynamically loaded here -->
+            <div>
+                <h3>Фільтри</h3>
+                <h5>Ціна</h5>
+                <label for="text">від</label>
+                <input type="text" id="inputVid">
+                <label for="text">до</label>
+                <input type="text" id="inputDo">
+                <button id="filter-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+
             </div>
-        </main>
+        </aside>
+        <div id="product-list" class="product-grid">
+            <!-- Products will be dynamically loaded here -->
+        </div>
+        
     </div>
     <script>
         document.getElementById('login-button').addEventListener('click', () => {
@@ -32,6 +47,8 @@
         });
     </script>
     <script src="checkLogin.js"></script>
-    <script src="addProduct.js"></script>
+    <!-- <script src="addProduct.js"></script> -->
+    <script src="loadProduct.js"></script>
+    <script src="loadProductWithFilter.js"></script>
 </body>
 </html>

@@ -61,6 +61,21 @@ body {
     text-align: right;
     border-bottom: 1px solid #ddd;
 }
+.header2 {
+    background-color: #f8f9fa;
+    padding: 20px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    
+}
+.header2 input {
+    width: 500px; /* задає ширину поля */
+    height: 10px; /* задає висоту поля */
+    padding: 10px; /* внутрішні відступи */
+    font-size: 16px; /* розмір шрифту */
+    border: 1px solid #ccc; /* рамка поля */
+    border-radius: 4px; /* закруглення кутів */
+}
 
 #login-button {
     background-color: #007bff;
@@ -75,6 +90,14 @@ body {
     color: white;
     border: none;
     padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+#findBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 9px 30px;
     cursor: pointer;
     border-radius: 4px;
 }
@@ -129,3 +152,23 @@ body {
 #Home-button {
     display: none; /* Initially hide the Home button */
 }
+
+/* для відображення продуктів в 3 ряди */
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    gap: 10px; /* Adjust the gap between products */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+    margin-top: 50px;
+    width: 100%;
+  }
+  
+  /* Product Card */
+  .product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
