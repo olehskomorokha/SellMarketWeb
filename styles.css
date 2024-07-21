@@ -4,10 +4,46 @@ body {
     padding: 0;
 }
 
+.header {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+}
+
+.header2 {
+    background-color: #f8f9fa;
+    padding: 20px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.header2 input {
+    width: 500px;
+    height: 30px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#login-button, #Home-button, #findBtn, #addProduct-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#login-button:hover, #Home-button:hover, #findBtn:hover, #addProduct-button:hover {
+    background-color: #0056b3;
+}
+
 .container {
     display: flex;
-    height: calc(100vh - 40px); /* Adjust height to account for the top margin */
-    margin-top: 40px; /* Add top margin to create space from the top of the screen */
+    height: calc(100vh - 40px);
+    margin-top: 40px;
 }
 
 .sidebar {
@@ -23,152 +59,49 @@ body {
     overflow-y: auto;
 }
 
-#category-id {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 5px;
-}
-
-#fetch-products {
-    display: block;
-    width: 100%;
-    padding: 5px 10px;
-}
-
 #product-list {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.product-item {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px;
-    width: calc(33.333% - 20px);
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.header {
-    background-color: #f8f9fa;
-    padding: 10px 20px;
-    text-align: right;
-    border-bottom: 1px solid #ddd;
-}
-.header2 {
-    background-color: #f8f9fa;
-    padding: 20px 20px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    
-}
-.header2 input {
-    width: 500px; /* задає ширину поля */
-    height: 10px; /* задає висоту поля */
-    padding: 10px; /* внутрішні відступи */
-    font-size: 16px; /* розмір шрифту */
-    border: 1px solid #ccc; /* рамка поля */
-    border-radius: 4px; /* закруглення кутів */
-}
-
-#login-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-#Home-button{
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-#findBtn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 9px 30px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-#addProduct-button{
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-#login-button:hover {
-    background-color: #0056b3;
-}
-
-.container {
-    display: flex;
-    margin: 20px;
-}
-
-.sidebar {
-    width: 200px;
-    margin-right: 20px;
-}
-
-.content {
-    flex: 1;
-}
-
-#product-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 1px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.product-item {
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 4px;
-}
+
 .category-box {
     border: 1px solid #ccc;
     padding: 10px;
     margin: 5px;
     text-align: center;
 }
+
 .category-text {
     font-size: 16px;
     margin-top: 10px;
 }
+
 #Home-button {
     display: none; /* Initially hide the Home button */
 }
-
-/* для відображення продуктів в 3 ряди */
-
-/* Product Grid */
 .product-grid {
     display: grid;
-    gap: 10px; /* Adjust the gap between products */
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 50px;
     width: 100%;
-  }
-  
-  /* Product Card */
-  .product-card {
+}
+.product-card {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
+    width: 250px; /* Ширина картки продукту */
+    height: 300px; /* Висота картки продукту */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

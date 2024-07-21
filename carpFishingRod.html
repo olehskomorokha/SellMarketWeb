@@ -18,22 +18,34 @@
         <input type="text">
         <button id="findBtn">Пошук</button>
     </header>
-    <div class="container">
-        <aside class="sidebar">
-            <div>
-                <h3>Фільтри</h3>
-                <h5>Ціна</h5>
-                <label for="text">від</label>
-                <input type="text" id="inputVid">
-                <label for="text">до</label>
-                <input type="text" id="inputDo">
-                <button id="filter-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-
+    <article class="page-Content">
+        <div class="container">
+            <aside class="sidebar">
+                <div>
+                    <h3>Фільтри</h3>
+                    <h5>Ціна</h5>
+                    <label for="text">від</label>
+                    <input type="text" id="inputVid">
+                    <label for="text">до</label>
+                    <input type="text" id="inputDo">
+                    <button id="filter-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <br>
+                    <label for="text">Сортування: </label>
+                    <select name="sorting" id="sortType">
+                        <option value="position">По порядку</option>
+                        <option value="price">По зростанню ціни</option>
+                        <option value="-price">По спаданню ціни</option>
+                        <option value="-date_created">По новизні</option>
+                    </select>
+    
+    
+                </div>
+            </aside>
+            <div id="product-list" class="product-grid">
+                <!-- Products will be dynamically loaded here -->
             </div>
-        </aside>
-        <div id="product-list" class="product-grid">
-            <!-- Products will be dynamically loaded here -->
-        </div>
+    </article>
+    
         
     </div>
     <script>
