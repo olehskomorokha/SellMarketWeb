@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Page</title>
+    <title>Product page</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/4879c593b5.js" crossorigin="anonymous"></script>
 </head>
@@ -18,25 +18,30 @@
         <input type="text">
         <button id="findBtn">Пошук</button>
     </header>
-    
-    <div class="container">
-       
-        <main class="content">
-            
-            <h1 style="text-align: center;">Розділи товарів</h1>
-            <div id="productcategory-list">
-                
-                <!-- Products will be dynamically loaded here -->
+    <div class="product-container">
+        <!-- Image slider -->
+        <div class="slider">
+            <div class="img-box">
+                <img src="" alt="" class="slider-img"/>
             </div>
-        </main>
+        </div>
+        <!-- Next and Prev Buttons -->
+         <button class="img-btn prev">Prev</button>
+         <button class="img-btn next">Next</button>
     </div>
+
+
     <script>
         document.getElementById('login-button').addEventListener('click', () => {
-            window.location.href = 'registerLogin.html';
+             window.location.href = 'registerLogin.html';
+        });
+    </script>
+    <script>
+        document.getElementById('Home-button').addEventListener('click', () => {
+            window.location.href = 'Home.html';
         });
     </script>
     <script src="checkLogin.js"></script>
-    <script src="main2.js"></script>
-    <script></script>
+    <script src="imgLoader.js"></script>
 </body>
 </html>

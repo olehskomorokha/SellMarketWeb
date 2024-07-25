@@ -105,3 +105,36 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+.productcategory-list{
+    width: 100px;
+    
+}
+/* product page styls */
+/* img styles */
+.slider {
+    margin: 50px auto;
+    width: 50%;
+    background-color: #888;
+}
+.img-box img {
+    width: 100%;
+
+}
+.img-btn {
+    border: none;
+    outline: none;
+    background: #888;
+    padding: 10px;
+    font-size: 20px;
+    color: #ddd;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.img-btn:hover {
+    background-color: #111;
+}
+.product-container {
+    background-color: #007bff;
+}
+/* /img styles */

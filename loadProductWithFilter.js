@@ -37,7 +37,12 @@
                                 <p>${product.description}</p>
                                 <p><strong>Price:</strong> $${product.price.toFixed(2)}</p>
                                 <p><strong>Seller:</strong> ${product.sellerName}</p>
+                                <p><strong>Product ID:</strong> ${product.id}</p>
                             `;
+                            div.addEventListener('click', () => {
+                                window.location.href = `product.html?id=${product.id}`;
+                                console.log(product);
+                            });
                     productList.appendChild(div);
                     });
                 })

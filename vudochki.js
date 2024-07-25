@@ -7,7 +7,7 @@ async function fetchProductCategories() {
         const categories = await response.json();
         console.log(categories); // Log the fetched data
 
-        const productList = document.getElementById('product-list');
+        const productList = document.getElementById('productcategory-list');
         productList.innerHTML = '';
 
         const pageMap = {

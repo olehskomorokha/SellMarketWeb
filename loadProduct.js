@@ -19,8 +19,13 @@ document.addEventListener("DOMContentLoaded", function() {
                     <h3>${product.title}</h3>
                     <p>${product.description}</p>
                     <p><strong>Price:</strong> $${product.price.toFixed(2)}</p>
-                    <p><strong>Seller:</strong> ${product.sellerName}</p>
+                    <p><strong>Seller:</strong> ${product.sellerName}</p>   
+                    <p><strong>Product ID:</strong> ${product.id}</p>
                 `;
+                div.addEventListener('click', () => {
+                    window.location.href = `product.html?id=${product.Id}`;
+                    console.log(product);
+                });
                 productList.appendChild(div);
             });
         })
