@@ -5,7 +5,7 @@
             const sortTypeSelect = document.getElementById("sortType");
             const filterButton = document.getElementById("filter-button");
 
-            let id = 3;
+            let id = 5;
 
             function loadProducts(categoryId, minPrice, maxPrice, sortType) {
                 let url = `https://localhost:44383/api/Product/GetAllProductBySubcategoryWithFilterId?id=${categoryId}`;
@@ -33,15 +33,13 @@
                         const div = document.createElement('div');
                         div.classList.add('product-card');
                         div.innerHTML = `
-                                <h3>${product.title}</h3>
-                                <p>${product.description}</p>
-                                <p><strong>Price:</strong> $${product.price.toFixed(2)}</p>
-                                <p><strong>Seller:</strong> ${product.sellerName}</p>
-                                <p><strong>Product ID:</strong> ${product.id}</p>
+                                    <h3>${product.title}</h3>
+                                    <img src="${product.img}" alt="" />
+                                    <p><strong>Price:</strong> $${product.price.toFixed(2)}</p>
                             `;
                             div.addEventListener('click', () => {
                                 window.location.href = `product.html?id=${product.id}`;
-                                console.log(product);
+                                
                             });
                     productList.appendChild(div);
                     });

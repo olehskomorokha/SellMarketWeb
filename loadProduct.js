@@ -16,14 +16,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 const div = document.createElement('div');
                 div.classList.add('product-item');
                 div.innerHTML = `
-                    <h3>${product.title}</h3>
-                    <p>${product.description}</p>
-                    <p><strong>Price:</strong> $${product.price.toFixed(2)}</p>
-                    <p><strong>Seller:</strong> ${product.sellerName}</p>   
-                    <p><strong>Product ID:</strong> ${product.id}</p>
+                      <h3>${product.title}</h3>
+                      <img src="${product.img}" alt="" />
+                      <p><strong>Price:</strong> $${product.price.toFixed(2)}</p>
                 `;
                 div.addEventListener('click', () => {
-                    window.location.href = `product.html?id=${product.Id}`;
+                    window.location.href = `product.html?id=${product.id}`;
                     console.log(product);
                 });
                 productList.appendChild(div);

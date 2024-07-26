@@ -7,7 +7,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get('id');
 
 fetchImages()
-// Виконати запит до контролера
+// Виконати запит д о контролера
 async function fetchImages() {
     try {
         const response = await fetch(`https://localhost:44383/api/Product/GetProductImg?productId=${productId}`);
