@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <script src="https://kit.fontawesome.com/4879c593b5.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -28,15 +28,24 @@
                 
                 <!-- Products will be dynamically loaded here -->
             </div>
+            <div class="products">
+                <h1>Товари</h1>
+                <div id="product-list" class="product-grid">
+                    <!-- Products will be dynamically loaded here -->
+                </div>
+            </div>
         </main>
+        
     </div>
     <script>
         document.getElementById('login-button').addEventListener('click', () => {
-            window.location.href = 'registerLogin.html';
+            window.location.href = '../HTML/registerLogin.html';
         });
     </script>
-    <script src="checkLogin.js"></script>
-    <script src="main2.js"></script>
+
+    <script src="../UserLogicJs/checkLogin.js"></script>
+    <script src="../main2.js"></script>
+    <script src="../GetProductJs/getProductForMain.js"></script>
     <script></script>
 </body>
 </html>

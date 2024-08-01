@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <script src="https://kit.fontawesome.com/4879c593b5.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -50,17 +50,16 @@
     </div>
     <script>
         document.getElementById('login-button').addEventListener('click', () => {
-             window.location.href = 'registerLogin.html';
+             window.location.href = '/HTML/registerLogin.html';
         });
     </script>
     <script>
         document.getElementById('Home-button').addEventListener('click', () => {
-            window.location.href = 'Home.html';
+            window.location.href = '/HTML/Home.html';
         });
     </script>
-    <script src="checkLogin.js"></script>
-    <!-- <script src="addProduct.js"></script> -->
-    <script src="loadProduct.js"></script>
-    <script src="loadProductWithFilter.js"></script>
+    <script src="../UserLogicJs/checkLogin.js"></script>
+    <script src="../GetProductJs/loadProduct.js"></script>
+    <script src="../GetProductJs/loadProductWithFilter.js"></script>
 </body>
 </html>

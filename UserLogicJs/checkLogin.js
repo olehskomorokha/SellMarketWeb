@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 }});
 document.getElementById('Home-button').addEventListener('click', () => {
-    window.location.href = 'Home.html';
+    window.location.href = '../HTML/Home.html';
 });
 document.getElementById('addProduct-button').addEventListener('click', () => {
-    window.location.href = 'createAnAd.html';
+    window.location.href = '../HTML/createAnAd.html';
 });

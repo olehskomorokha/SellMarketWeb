@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="../styles.css">
     <script src="https://kit.fontawesome.com/4879c593b5.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -18,30 +19,27 @@
         <input type="text">
         <button id="findBtn">Пошук</button>
     </header>
-    <div class="product-container">
-        <!-- Image slider -->
-        <div class="slider">
-            <div class="img-box">
-                <img src="" alt="" class="slider-img"/>
+    <div class="container">
+        <aside class="sidebar">
+            <div>
+                <script src="../EachCategoryJs/kotushki.js"></script>
             </div>
-        </div>
-        <!-- Next and Prev Buttons -->
-         <button class="img-btn prev">Prev</button>
-         <button class="img-btn next">Next</button>
+        </aside>
+        <main class="content">
+            <div id="product-list">
+                <!-- Categories will be dynamically loaded here -->
+            </div>
+            <div id="detail-list">
+                <!-- Category details will be dynamically loaded here -->
+            </div>
+        </main>
     </div>
-
-
     <script>
+        
         document.getElementById('login-button').addEventListener('click', () => {
-             window.location.href = 'registerLogin.html';
+            window.location.href = 'registerLogin.html';
         });
     </script>
-    <script>
-        document.getElementById('Home-button').addEventListener('click', () => {
-            window.location.href = 'Home.html';
-        });
-    </script>
-    <script src="checkLogin.js"></script>
-    <script src="imgLoader.js"></script>
+    <script src="../UserLogicJs/checkLogin.js"></script>
 </body>
 </html>

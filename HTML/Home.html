@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сторінка користувача</title>
+    <link rel="stylesheet" href="../home.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header1">
+            <h1>Профіль</h1>
+            <button id="logout-button" class="logout-button">Вийти</button>
+        </header>
+        <header class="header2">
+            <button id="myPost" class="nav-button">Мої оголошення</button>
+            <button id="Profile" class="nav-button">Профіль</button>
+            <button id="ProfileSettings" class="nav-button">Налаштування</button>
+            <button id="Pay" class="nav-button">Оплата</button>
+        </header>
+        <div class="myPostClass">
+            
+        </div>
+    </div>
+
+    <script>
+        const token = localStorage.getItem('jwtToken');
+        document.getElementById('logout-button').addEventListener('click', function() {
+            localStorage.removeItem('jwtToken'); // Remove the JWT token from local storage using the key
+            alert('Ви успішно розлогінились'); // Alert the user of successful logout
+            window.location.href = '../main2.html'; // Redirect to the login/register page
+        });
+    </script>
+</body>
+</html>

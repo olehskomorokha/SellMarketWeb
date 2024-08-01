@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const productList = document.getElementById("product-list");
-    let id = 3;
     // Function to load products based on category id
-    function loadProducts(categoryId) {
-        fetch(`https://localhost:44383/api/Product/GetAllProductBySubcategoryId?id=${id}`)
+    function loadProducts() {
+        fetch(`https://localhost:44383/api/Product/GetNewProduct`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -21,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
                       <p><strong>Price:</strong> $${product.price.toFixed(2)}</p>
                 `;
                 div.addEventListener('click', () => {
-                    window.location.href = `product.html?id=${product.id}`;
+                    window.location.href = `../HtmlWithProduct/product.html?id=${product.id}`;
                     console.log(product);
                 });
                 productList.appendChild(div);
@@ -32,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Call loadProducts automatically with a specific categoryId
-    const categoryId = 'your-default-category-id'; // Replace with your desired category ID
-    loadProducts(categoryId);
+   
+    loadProducts();
 });

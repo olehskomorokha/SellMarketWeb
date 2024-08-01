@@ -140,7 +140,7 @@ document.getElementById('signupBtn').addEventListener('click', async () => {
 
         if (response.ok) {
             alert('User registered successfully');
-            window.location.href = 'main.html';
+            window.location.href = '../main2.html';
         } else {
             createErrorMessage(document.getElementById('emailInput'), 'email already exist');
         }

@@ -1,19 +1,17 @@
 async function fetchProductCategories() {
     try {
-        const response = await fetch('https://localhost:44383/api/Product/GetSubcategoriesByCategoryId?Id=2');
+        const response = await fetch('https://localhost:44383/api/Product/GetSubcategoriesByCategoryId?id=2');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
         const categories = await response.json();
         console.log(categories); // Log the fetched data
 
-        const productList = document.getElementById('product-list');
+        const productList = document.getElementById('productcategory-list');
         productList.innerHTML = '';
 
         const pageMap = {
-            1: 'carpСoils.html',
-            2: 'spinningСoils.html',
-            3: 'feederCoils.html'
+            21: '../HtmlWithProduct/carpFishingRod.html'    
         };
 
         categories.forEach(category => {
@@ -25,7 +23,8 @@ async function fetchProductCategories() {
             categoryBox.addEventListener('click', () => {
                 const targetPage = pageMap[category.id]; // Navigate based on category ID
                 if (targetPage) {
-                    window.location.href = targetPage;
+                    const urlWithId = `${targetPage}?id=${category.id}`;
+                    window.location.href = urlWithId;
                 } else {
                     alert('Page not found for this category');
                 }

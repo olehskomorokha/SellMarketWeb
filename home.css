@@ -1,0 +1,50 @@
+
+/* Styles for the logout button */
+.header1 {
+    display: flex;
+    justify-content: space-between; /* This will move the h1 to the left and the button to the right */
+    align-items: center; /* This will vertically center the elements */
+    padding: 10px; /* Optional: Add padding if needed */
+}
+
+#logout-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.header1 {
+    background-color: #f8f9fa;
+}
+.header2 {
+    background-color: #6987a4;
+}
+.nav-button {
+    padding: 10px 20px; /* Adds padding to the buttons */
+    border: none; /* Removes default border */
+    background-color: #51adb0; /* Button background color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for buttons */
+}
+#product-list {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 1px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.product-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+    width: 100%;
+}
+.nav-button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+}

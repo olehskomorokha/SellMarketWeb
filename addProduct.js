@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchProductCategories() {
     try {
-        const response = await fetch('https://localhost:44383/api/Product/GetSubcategoriesByCategoryId?Id=1');
+        const response = await fetch('https://localhost:44383/api/Product/GetAllSubcategory');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }

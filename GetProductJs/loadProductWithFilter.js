@@ -5,7 +5,11 @@
             const sortTypeSelect = document.getElementById("sortType");
             const filterButton = document.getElementById("filter-button");
 
-            let id = 5;
+            // Отримуємо параметри з URL
+            const params = new URLSearchParams(window.location.search);
+   
+            // Зчитуємо параметр `id` з URL і зберігаємо його в змінну `id`
+            let id = params.get('id');
 
             function loadProducts(categoryId, minPrice, maxPrice, sortType) {
                 let url = `https://localhost:44383/api/Product/GetAllProductBySubcategoryWithFilterId?id=${categoryId}`;
@@ -38,7 +42,7 @@
                                     <p><strong>Price:</strong> $${product.price.toFixed(2)}</p>
                             `;
                             div.addEventListener('click', () => {
-                                window.location.href = `product.html?id=${product.id}`;
+                                window.location.href = `../HtmlWithProduct/product.html?id=${product.id}`;
                                 
                             });
                     productList.appendChild(div);

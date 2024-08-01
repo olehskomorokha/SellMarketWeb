@@ -32,7 +32,7 @@ async function loginUser(event) {
         localStorage.setItem('jwtToken', token);
 
         // Redirect to main2.html
-        window.location.href = 'main2.html';
+        window.location.href = '../main2.html';
         
     } catch (error) {
         console.error('Error logging in:', error);

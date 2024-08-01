@@ -116,10 +116,13 @@ body {
     width: 50%;
     background-color: #888;
 }
+
 .img-box img {
     width: 100%;
-
+    height: 500px; /* Set a fixed height */
+    object-fit: contain; /* Scale image to fit without cropping */
 }
+
 .img-btn {
     border: none;
     outline: none;
@@ -134,7 +137,12 @@ body {
 .img-btn:hover {
     background-color: #111;
 }
+
 .product-container {
     background-color: #007bff;
 }
 /* /img styles */
+
+/* Home page css */
+
+/* /Home page css*/

@@ -11,8 +11,8 @@ async function fetchProductCategories() {
         productList.innerHTML = '';
 
         const pageMap = {
-            1: 'vudochki.html',
-            2: 'kotushki.html'
+            1: 'HTML/kotushki.html',
+            2: 'HTML/vudochki.html'
         };
 
         categories.forEach(category => {
