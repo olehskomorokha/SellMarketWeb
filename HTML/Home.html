@@ -19,10 +19,13 @@
             <button id="Pay" class="nav-button">Оплата</button>
         </header>
         <div class="myPostClass">
-            
+            <div id="product-list" class="product-grid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
         </div>
-    </div>
 
+    </div>
+    <script src="../GetProductJs/getUserPosts.js"></script>
     <script>
         const token = localStorage.getItem('jwtToken');
         document.getElementById('logout-button').addEventListener('click', function() {

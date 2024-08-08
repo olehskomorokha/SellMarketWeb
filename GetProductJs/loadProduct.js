@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
          // Якщо параметр `id` відсутній в URL, можна призначити значення за замовчуванням
    
     // Function to load products based on category id
-    function loadProducts(categoryId) {
+    function loadProducts(id) {
         fetch(`https://localhost:44383/api/Product/GetAllProductBySubcategoryId?id=${id}`)
         .then(response => {
             if (!response.ok) {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
             productList.innerHTML = '';
             products.forEach(product => {
                 const div = document.createElement('div');
-                div.classList.add('product-item');
+                div.classList.add('product-card');
                 div.innerHTML = `
                       <h3>${product.title}</h3>
                       <img src="${product.img}" alt="" />

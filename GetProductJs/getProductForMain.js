@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
             productList.innerHTML = '';
             products.forEach(product => {
                 const div = document.createElement('div');
-                div.classList.add('product-item');
+                div.classList.add('product-card');
                 div.innerHTML = `
                       <h3>${product.title}</h3>
                       <img src="${product.img}" alt="" />
