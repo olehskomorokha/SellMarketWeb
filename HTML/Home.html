@@ -10,7 +10,9 @@
     <div class="container">
         <header class="header1">
             <h1>Профіль</h1>
+            <button id="MainHtml-button" class="logout-button">На головну</button>
             <button id="logout-button" class="logout-button">Вийти</button>
+            
         </header>
         <header class="header2">
             <button id="myPost" class="nav-button">Мої оголошення</button>
@@ -23,9 +25,20 @@
                 <!-- Products will be dynamically loaded here -->
             </div>
         </div>
+        <div class="MyProfileClass">
+            <h1>Profile</h1>
+        </div>
+        
+        <div class="MyProfileSettingsClass">
+            <h1>ProfileSettings</h1>
+        </div>
 
     </div>
+    <script>
+        
+    </script>
     <script src="../GetProductJs/getUserPosts.js"></script>
+    <script src="../HelpersJs/switcher.js"></script>
     <script>
         const token = localStorage.getItem('jwtToken');
         document.getElementById('logout-button').addEventListener('click', function() {
@@ -33,6 +46,9 @@
             alert('Ви успішно розлогінились'); // Alert the user of successful logout
             window.location.href = '../main2.html'; // Redirect to the login/register page
         });
+        document.getElementById("MainHtml-button").addEventListener('click', function(){
+            window.location.href = '../main2.html';
+        })
     </script>
 </body>
 </html>

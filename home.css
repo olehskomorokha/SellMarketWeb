@@ -7,7 +7,7 @@
     padding: 10px; /* Optional: Add padding if needed */
 }
 
-#logout-button {
+.logout-button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -15,6 +15,13 @@
     cursor: pointer;
     border-radius: 4px;
 }
+.delete-button{
+    background-color: red;
+    color: white;
+    padding: 4px 30px;
+    display: inline-block;
+}
+
 .header1 {
     background-color: #f8f9fa;
 }
@@ -45,19 +52,31 @@
     margin-top: 50px;
     width: 100%;
 }
+.myPostClass{
+    background-color: rgb(51, 148, 163);
+}
 .product-card {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: 250px; /* Ширина картки продукту */
-    height: 300px; /* Висота картки продукту */
+    width: 300px; /* Ширина картки продукту */
+    height: 500x; /* Висота картки продукту */
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* Центрування елементів по горизонталі */
 }
 .nav-button:hover {
     background-color: #0056b3; /* Darker background color on hover */
+}
+/* налаштування відображення кнопок в меню користувача */
+/* Приховати всі секції за замовчуванням */
+.MyProfileClass, .MyProfileSettingsClass {
+    display: none;
+}
+.nav-button.active {
+    background-color: #3d8487; /* Darkened color when the button is active */
 }
