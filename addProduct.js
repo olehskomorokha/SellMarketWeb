@@ -52,7 +52,6 @@ async function fetchProductCategories() {
             throw new Error('Network response was not ok');
         }
         const categories = await response.json();
-        console.log(categories); // Log the fetched data
 
         const categorySelect = document.getElementById('category');
         categorySelect.innerHTML = '';

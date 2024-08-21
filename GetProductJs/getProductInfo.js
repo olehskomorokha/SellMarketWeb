@@ -1,5 +1,8 @@
 
     const productTitle = document.getElementById("product-title");
+    const userDescription = document.getElementById("user-description");
+    const productDescription = document.getElementById("product-description");
+
     const params = new URLSearchParams(window.location.search);
     let id = params.get('id');
     
@@ -18,18 +21,37 @@
             const product = products[0];  // Отримуємо перший (і єдиний) елемент з масиву
             
             productTitle.innerHTML = '';
-        
+            userDescription.innerHTML = '';
+            productDescription.innerHTML = '';
+
+            const divPDesc = document.createElement('div');
+            const divDesc = document.createElement('div');
             const div = document.createElement('div');
+
             div.classList.add('productInfo');
             div.innerHTML = `
+            
+                <p><strong>Дата публікації:</strong> ${product.dateOfPublish.substring(0,10)}</p>
                 <h3>${product.title}</h3>
-                <p><strong>Description:</strong> ${product.description}</p>
-                <p><strong>Category:</strong> ${product.category}</p>
                 <p><strong>Price:</strong> $${product.price}</p>
-                
-                <p><strong>Seller:</strong> ${product.sellerName}</p>
             `;
-        
+            
+            divDesc.classList.add('UserDescription')
+            divDesc.innerHTML = `
+                
+                <p><strong>Продавець:</strong></p>
+                
+                <p>${product.sellerName}</p>
+            
+            `
+            divPDesc.classList.add('ProductDescription')
+            divPDesc.innerHTML = `
+                <h1>Опис</h1>
+                <p> ${product.description}</p>
+            `
+
+            productDescription.appendChild(divPDesc);
+            userDescription.appendChild(divDesc);
             productTitle.appendChild(div);
         })
         .catch(error => {

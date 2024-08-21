@@ -80,3 +80,8 @@
 .nav-button.active {
     background-color: #3d8487; /* Darkened color when the button is active */
 }
+
+/* MyProfileClass */
+.myProfyleMain{
+    text-align: center;
+}
