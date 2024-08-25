@@ -32,12 +32,10 @@ function loadUserInfo() {
         div.classList.add('UserInfo');
         div.innerHTML = `
             <h1>Редагування профілю</h1>
-            <h3>Основна інформація</h3>
             <p>Ім'я: ${user.firstName}</p>
             <p>Прізвище: ${user.lastName}</p>
-            <p>Нікнейм: ${user.nickName}</p>
             <p>Email: ${user.userEmail}</p>
-            <p>Телефон: ${user.phoneNumber}</p>
+            
         `;
         
         MyProfile.appendChild(div);

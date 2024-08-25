@@ -18,8 +18,6 @@ function createErrorMessage(element, message) {
 signinBtn.onclick = function() {
     nameField.style.maxHeight = "0";
     LastnameField.style.maxHeight = "0";
-    PnodeField.style.maxHeight = "0";
-    NicknameField.style.maxHeight = "0";
     title.innerHTML = "Sign In";
     signupBtn.classList.add("disable");
     signinBtn.classList.remove("disable");
@@ -28,8 +26,6 @@ signinBtn.onclick = function() {
 signupBtn.onclick = function() {
     nameField.style.maxHeight = "60px";
     LastnameField.style.maxHeight = "60px";
-    PnodeField.style.maxHeight = "60px";
-    NicknameField.style.maxHeight = "60px";
     title.innerHTML = "Sign Up";
     signupBtn.classList.remove("disable");
     signinBtn.classList.add("disable");
@@ -80,8 +76,6 @@ signupBtn.onclick = function() {
 document.getElementById('signupBtn').addEventListener('click', async () => {
     let firstName = document.getElementById('nameInput').value.trim();
     let lastName = document.getElementById('lastnameInput').value.trim();
-    let phoneNumber = document.getElementById('phoneInput').value.trim();
-    let nickName = document.getElementById('nicknameInput').value.trim();
     let email = document.getElementById('emailInput').value.trim();
     let password = document.getElementById('passwordInput').value.trim();
 
@@ -99,14 +93,7 @@ document.getElementById('signupBtn').addEventListener('click', async () => {
         createErrorMessage(document.getElementById('lastnameInput'), 'Last Name is required');
         valid = false;
     }
-    if (!phoneNumber) {
-        createErrorMessage(document.getElementById('phoneInput'), 'Phone number is required');
-        valid = false;
-    }
-    if (!nickName) {
-        createErrorMessage(document.getElementById('nicknameInput'), 'nickname is required');
-        valid = false;
-    }
+   
     if (!email || !validateEmail(email)) {
         createErrorMessage(document.getElementById('emailInput'), 'Valid email is required');
         valid = false;
@@ -123,8 +110,6 @@ document.getElementById('signupBtn').addEventListener('click', async () => {
     let user = {
         FirstName: firstName,
         LastName: lastName,
-        PhoneNumber: phoneNumber,
-        NickName: nickName,
         Email: email,
         Password: password
     };

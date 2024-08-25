@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сторінка користувача</title>
     <link rel="stylesheet" href="../home.css">
+    <script src="https://kit.fontawesome.com/4879c593b5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -29,15 +30,37 @@
             <div id="MyProfile" class="myProfyleMain">
                 <h1>Редагування профілю</h1>
                 <h3>Основна інформація</h3>
+                
+            </div>
+            <div class="MainUserInfo" id="MainUserInfo">
+                <div class="collapsible">
+                    <div class="collapsible-header" onclick="toggleCollapse()"><i class="fa-solid fa-angle-down"></i> Основна інформація</div>
+                    <div class="collapsible-content">
+                      <p>Це прихований контент, який розкриється при натисканні.</p>
+                    </div>
+                  </div>
             </div>
         </div>
         
         <div class="MyProfileSettingsClass">
-            <h1>ProfileSettings</h1>
+           
         </div>
 
     </div>
+    <script>
+        function toggleCollapse() {
+        const collapsible = document.querySelector('.collapsible');
+        const content = collapsible.querySelector('.collapsible-content');
 
+        if (collapsible.classList.contains('open')) {
+            collapsible.classList.remove('open');
+            content.style.height = '0';
+        } else {
+            collapsible.classList.add('open');
+            content.style.height = content.scrollHeight + 'px';
+        }
+}
+    </script>
     <script src="../UserFunctionality/getUserInfo.js"></script>
     <script src="../GetProductJs/getUserPosts.js"></script>
     <script src="../HelpersJs/switcher.js"></script>
